@@ -176,10 +176,14 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
       
   
   4. Configure Dataset Path:
+     
         Locate the data.yaml file within the dataset directory.
+
+        The data.yaml file show the number of classes and shows them as a list. The model will only use this for training and detection.
+         
         Update the paths for train, test, and val in the data.yaml file to point to the respective folders. This file is used by the model to retrieve the dataset paths.
   
-  5. Model Training
+  6. Model Training
   
       Training Notebook:
             Open the train.ipynb Jupyter notebook included in the dataset. This notebook is configured to use a pre-trained YOLOv8n model.
