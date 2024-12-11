@@ -200,7 +200,7 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 
          
 
-## Model Deployment
+## Model Deployment (can hook up the raspberry pi to your power source in the car and take it out for a test trive and detect traffic signs),
 
   1. Transfer Weights:
       After training, transfer the best.pt file to your Raspberry Pi. This can be done via secure copy (SCP) with the following command:
@@ -209,7 +209,7 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 
       Alternatively, you can transfer the weights using a USB drive.
 
-  2. Run Inference on test images locally:
+  2. Run Inference on live feed from your webam connected to the raspberry pi:
     
         Load the transferred best.pt weights in your YOLO environment on the Raspberry Pi.
         Set up a webcam and run inference on the live video feed to detect traffic signs in real-time.
