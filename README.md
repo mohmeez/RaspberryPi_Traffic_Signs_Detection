@@ -131,12 +131,12 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 ## Build and train model locally 
   1. Dataset Preparation
   
-      Download Dataset:
-            Download the traffic sign dataset from Roboflow: 
+      
+     Download the traffic sign dataset from Roboflow: 
     
                 https://universe.roboflow.com/project-sign-detection/traffic-sign-cdfml
             
-      The dataset will be downloaded as a zipped file.
+     The dataset will be downloaded as a zipped file.
   
   2. Unzip Dataset:
      
