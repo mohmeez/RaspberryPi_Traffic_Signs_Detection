@@ -30,7 +30,7 @@ Software
 Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 1. Install Raspberry Pi OS
 
-    Download Raspberry Pi OS Full Desktop:
+    Download Raspberry Pi OS Full Desktop using a microsd card, min 16GB:
         Visit the Raspberry Pi Downloads page and download the full desktop version of Raspberry Pi OS.
    
    ![image](https://github.com/user-attachments/assets/e7fdf186-5cd4-4a05-957e-85ffc49688a3)
@@ -94,27 +94,27 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 
 5. Create a Virtual Environment
     
-        Navigate to Your Project Directory:
+   Navigate to Your Project Directory:
     
-      cd ~
-      mkdir detection
-      cd detection
+          cd ~
+          mkdir detection
+          cd detection
       
       Create a Virtual Environment:
       
-      python3 -m venv yolo
+          python3 -m venv yolo
       
       Activate the Virtual Environment:
       
           source yolo/bin/activate
     
 6. Install Required Libraries
-    
-   To simplify the installation of Python dependencies, a requirements.txt file is provided. This allows users to install all necessary libraries with a single command.
+   
     
         Create requirements.txt:
+
     
-   Create a requirements.txt file inside the detection folder with the following content:
+   Create a requirements.txt file inside the detection folder with the following content: (on Raspberry pi)
     
       ultralytics
       torch
@@ -128,8 +128,9 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
       
      This command will install all the required Python libraries listed in the requirements.txt file.
 
-## Build and train model locally 
-  1. Dataset Preparation
+## Build and train model locally (PC or Laptop)
+
+  1. Dataset Preparation (locally on PC or Laptop)
   
       
      Download the traffic sign dataset from Roboflow: 
@@ -138,7 +139,7 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
             
      The dataset will be downloaded as a zipped file.
   
-  2. Unzip Dataset:
+  2. Unzip Dataset (locally on PC or Laptop):
      
       Unzip the downloaded file. After unzipping, you should have three folders: train, val, and test containing the images along with their corresponding labels for bounding boxes.
 
@@ -179,18 +180,18 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
      
         Locate the data.yaml file within the dataset directory.
 
-        The data.yaml file show the number of classes and shows them as a list. The model will only use this for training and detection.
+        The data.yaml file show the number of classes and shows their respective names in a list. The model will only use this for training and detection.
          
         Update the paths for train, test, and val in the data.yaml file to point to the respective folders. This file is used by the model to retrieve the dataset paths.
   
   6. Model Training
   
-      Training Notebook:
+      Training Notebook (locally on PC or Laptop):
             Open the train.ipynb Jupyter notebook included in the dataset. This notebook is configured to use a pre-trained YOLOv8n model.
       
       Run Training:
             Execute the cells in the notebook to start training the model on your local machine using the provided dataset.
-            The model will automatically save the best weights based on the training performance to runs/train/weights/best.pt.
+            The model will automatically save the best weights based on the training performance to runs/train/weights/best.pt. (will differ  on your training, look at results provided by YOLO for the correct path)
 
       Run Inference on test images locally:
 
@@ -212,13 +213,14 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
   2. Run Inference on live feed from your webam connected to the raspberry pi:
     
         Load the transferred best.pt weights in your YOLO environment on the Raspberry Pi. (refer to the yolo_inference.py file foe details)
+     
         Set up a webcam and run inference on the live video feed to detect traffic signs in real-time.
 
-  3. Create a shell script named start_yolo.sh (attached in the repo) This script is in the user foler.
+  4. Create a shell script named start_yolo.sh (attached in the repo) This script is in the user foler.
   
      The function if this script is to activate the virtual environment and run the yolo_inference.py Python script on the RaspberryPi
 
-     After transfering the saved yolo model weights, the yolo_inference.py and the start_yolo shell script to the Raspberry pi, run the shell script using the follwoing command in the terminal:
+     After transfering the saved yolo model weights **best.pt**, the **yolo_inference.py** and the **start_yolo.sh** shell script to the Raspberry pi, run the shell script using the follwoing command in the terminal:
 
             bash start_yolo.sh
 
