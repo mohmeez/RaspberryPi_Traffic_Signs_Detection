@@ -1,7 +1,9 @@
 #!/bin/bash
 
-#Activate virtual Environment
-./home/mohsin/detection/yolo/bin/activate
+# activate virtual Environment
+source /home/mohsin/detection/yolo/bin/activate
 
 #Run the Python Script
-python yolo_inference
+python /home/mohsin/detect/yolo_inference.py
+
+
