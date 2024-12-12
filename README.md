@@ -1,4 +1,8 @@
 # RaspberryPi_Traffic_Signs_Detection
+
+![](https://github.com/mohmeez/RaspberryPi_Traffic_Signs_Detection/blob/main/Yolo_Stop_Sign_inference.gif)
+
+
 Overview
 
 This project utilizes a Raspberry Pi 4 and a standard webcam to build a real-time object detection system using YOLO (You Only Look Once). The setup involves configuring the Raspberry Pi OS, setting up a Python virtual environment, and installing necessary libraries to facilitate model building and detection.
@@ -18,6 +22,8 @@ Hardware
     Standard USB webcam
     Keyboard and portable display for initial setup
     PC or laptop if you plan to remote SSH into the pi
+![](https://github.com/mohmeez/RaspberryPi_Traffic_Signs_Detection/blob/main/Raspberry_setup.jpg)
+    
 
 Software
 
