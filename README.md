@@ -211,5 +211,15 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 
   2. Run Inference on live feed from your webam connected to the raspberry pi:
     
-        Load the transferred best.pt weights in your YOLO environment on the Raspberry Pi.
+        Load the transferred best.pt weights in your YOLO environment on the Raspberry Pi. (refer to the yolo_inference.py file foe details)
         Set up a webcam and run inference on the live video feed to detect traffic signs in real-time.
+
+  3. Create a shell script named start_yolo.sh (attached in the repo) This script is in the user foler.
+  
+     The function if this script is to activate the virtual environment and run the yolo_inference.py Python script on the RaspberryPi
+
+     After transfering the saved yolo model weights, the yolo_inference.py and the start_yolo shell script to the Raspberry pi, run the shell script using the follwoing command in the terminal:
+
+            bash start_yolo.sh
+
+Congratulations! You have now succesfully delployed a YOLO model for object detection on an IOT edge device. Safe Driving!
