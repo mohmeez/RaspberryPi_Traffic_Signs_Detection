@@ -222,4 +222,4 @@ Follow these steps to set up your Raspberry Pi for the YOLO Detection Project.
 
             bash start_yolo.sh
 
-Congratulations! You have now succesfully delployed a YOLO model for object detection on an IOT edge device. Safe Driving!
+### Congratulations! You have now succesfully delployed a YOLO model for object detection using RaspberryPi. Safe Driving!
